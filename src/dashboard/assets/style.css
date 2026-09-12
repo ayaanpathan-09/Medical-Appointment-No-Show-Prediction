@@ -1,0 +1,7 @@
+/* Custom styling hooks for the Streamlit dashboard. Load with:
+   st.markdown(f"<style>{open('src/dashboard/assets/style.css').read()}</style>",
+               unsafe_allow_html=True) */
+
+.risk-high { color: #e74c3c; font-weight: 600; }
+.risk-medium { color: #f39c12; font-weight: 600; }
+.risk-low { color: #2ecc71; font-weight: 600; }

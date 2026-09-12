@@ -1,0 +1,50 @@
+# Hyperparameter grids per candidate algorithm.
+# The grids are intentionally compact so the complete project remains practical
+# on a normal student laptop while still comparing five model families.
+
+logistic_regression:
+  class: sklearn.linear_model.LogisticRegression
+  params:
+    C: [0.1, 1.0]
+    class_weight: ["balanced"]
+    max_iter: [1000]
+
+decision_tree:
+  class: sklearn.tree.DecisionTreeClassifier
+  params:
+    max_depth: [5, 10, null]
+    min_samples_leaf: [5, 10]
+    class_weight: ["balanced"]
+
+random_forest:
+  class: sklearn.ensemble.RandomForestClassifier
+  params:
+    n_estimators: [200]
+    max_depth: [10, null]
+    min_samples_leaf: [1, 5]
+    class_weight: ["balanced"]
+
+xgboost:
+  class: xgboost.XGBClassifier
+  params:
+    n_estimators: [200]
+    max_depth: [3, 5]
+    learning_rate: [0.05, 0.1]
+    subsample: [0.8]
+    colsample_bytree: [0.8]
+    eval_metric: ["logloss"]
+
+svm:
+  class: sklearn.svm.SVC
+  params:
+    C: [0.1, 1.0]
+    kernel: ["linear"]
+    class_weight: ["balanced"]
+    probability: [true]
+
+training:
+  test_size: 0.15
+  val_size: 0.15
+  cv_folds: 3
+  random_state: 42
+  use_smote: true

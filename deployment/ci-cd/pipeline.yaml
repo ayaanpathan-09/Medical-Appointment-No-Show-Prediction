@@ -1,0 +1,52 @@
+# Example CI/CD pipeline (GitHub Actions syntax).
+# Copy to .github/workflows/ci.yml at the repo root to activate it.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run unit tests
+        run: pytest tests/unit -v
+      - name: Run integration tests
+        run: pytest tests/integration -v
+
+  model-validation-gate:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Train and validate model (min Recall/F1 gate enforced in evaluate.py)
+        run: |
+          python -m src.data.ingestion tests/test_data/sample_appointments.csv --training \
+            --output data/processed/ci_ingested.csv
+          python -m src.data.preprocessing data/processed/ci_ingested.csv \
+            --output data/processed/ci_cleaned.csv
+          python -m src.features.feature_engineering data/processed/ci_cleaned.csv \
+            --output data/processed/ci_features.csv
+          python -m src.models.train data/processed/ci_features.csv
+
+  build-image:
+    needs: model-validation-gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -f deployment/Dockerfile -t medical-noshow-api:${{ github.sha }} .

@@ -1,0 +1,154 @@
+2026-09-11 19:34:14,522 | INFO | src.data.ingestion | Ingested sample_appointments.csv: 25 raw rows, 25 valid, 0 errors
+2026-09-11 19:34:14,523 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-11 19:34:14,526 | INFO | src.data.preprocessing | Preprocessing complete: 25 rows remain
+2026-09-11 19:34:14,539 | INFO | src.features.feature_engineering | Engineered features: 25 rows, 24 columns
+2026-09-11 19:34:14,685 | INFO | src.models.train | Applied SMOTE (k_neighbors=4): 17 -> 24 training rows
+2026-09-11 19:34:14,685 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-11 19:34:16,826 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:16,827 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-11 19:34:17,000 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:34:17,000 | INFO | src.models.train | Training candidate: random_forest
+2026-09-11 19:34:18,054 | INFO | src.models.train | random_forest val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:34:18,054 | INFO | src.models.train | Training candidate: xgboost
+2026-09-11 19:34:18,293 | INFO | src.models.train | xgboost val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:18,293 | INFO | src.models.train | Training candidate: svm
+2026-09-11 19:34:18,326 | INFO | src.models.train | svm val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:18,333 | INFO | src.models.train | Best candidate: logistic_regression | test metrics: {'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 0.6666666666666667, 'confusion_matrix': [[2, 1], [1, 0]]}
+2026-09-11 19:34:18,335 | INFO | src.models.registry | Saved model version v20260911_193418 (logistic_regression) to /tmp/pytest-of-root/pytest-3/test_pipeline_end_to_end0/models_registry/v20260911_193418
+2026-09-11 19:34:18,335 | INFO | src.models.registry | Promoted model version v20260911_193418 to production
+2026-09-11 19:34:18,335 | INFO | src.models.train | Model v20260911_193418 promoted to production.
+2026-09-11 19:34:18,343 | INFO | src.data.ingestion | Ingested sample_appointments.csv: 25 raw rows, 25 valid, 0 errors
+2026-09-11 19:34:18,343 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-11 19:34:18,346 | INFO | src.data.preprocessing | Preprocessing complete: 25 rows remain
+2026-09-11 19:34:18,353 | INFO | src.features.feature_engineering | Engineered features: 25 rows, 24 columns
+2026-09-11 19:34:18,361 | INFO | src.models.train | Applied SMOTE (k_neighbors=4): 17 -> 24 training rows
+2026-09-11 19:34:18,362 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-11 19:34:18,418 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:18,418 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-11 19:34:18,503 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.75, 'precision': 0.5, 'recall': 1.0, 'f1_score': 0.6666666666666666, 'roc_auc': 0.8333333333333334, 'confusion_matrix': [[2, 1], [0, 1]]}
+2026-09-11 19:34:18,503 | INFO | src.models.train | Training candidate: random_forest
+2026-09-11 19:34:19,646 | INFO | src.models.train | random_forest val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:34:19,646 | INFO | src.models.train | Training candidate: xgboost
+2026-09-11 19:34:19,820 | INFO | src.models.train | xgboost val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:19,820 | INFO | src.models.train | Training candidate: svm
+2026-09-11 19:34:19,852 | INFO | src.models.train | svm val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:34:19,859 | INFO | src.models.train | Best candidate: logistic_regression | test metrics: {'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 0.6666666666666667, 'confusion_matrix': [[2, 1], [1, 0]]}
+2026-09-11 19:34:19,860 | INFO | src.models.registry | Saved model version v20260911_193419 (logistic_regression) to /tmp/pytest-of-root/pytest-3/models_registry0/v20260911_193419
+2026-09-11 19:34:19,860 | INFO | src.models.registry | Promoted model version v20260911_193419 to production
+2026-09-11 19:34:19,860 | INFO | src.models.train | Model v20260911_193419 promoted to production.
+2026-09-11 19:34:20,049 | INFO | httpx | HTTP Request: POST http://testserver/api/v1/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-09-11 19:34:20,060 | INFO | src.features.feature_engineering | Engineered features: 1 rows, 13 columns
+2026-09-11 19:34:20,065 | INFO | httpx | HTTP Request: POST http://testserver/api/v1/predict "HTTP/1.1 200 OK"
+2026-09-11 19:34:20,077 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 18 columns
+2026-09-11 19:34:20,083 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 14 columns
+2026-09-11 19:34:20,090 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 14 columns
+2026-09-11 19:34:20,091 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:34:20,095 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-11 19:34:20,096 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:34:20,099 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-11 19:34:20,101 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:34:20,106 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-11 19:41:01,188 | INFO | src.data.ingestion | Ingested sample_appointments.csv: 25 raw rows, 25 valid, 0 errors
+2026-09-11 19:41:01,189 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-11 19:41:01,196 | INFO | src.data.preprocessing | Preprocessing complete: 25 rows remain
+2026-09-11 19:41:01,204 | INFO | src.features.feature_engineering | Engineered features: 25 rows, 24 columns
+2026-09-11 19:41:01,357 | INFO | src.models.train | Applied SMOTE (k_neighbors=4): 17 -> 24 training rows
+2026-09-11 19:41:01,358 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-11 19:41:03,528 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:03,528 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-11 19:41:03,713 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:41:03,714 | INFO | src.models.train | Training candidate: random_forest
+2026-09-11 19:41:04,783 | INFO | src.models.train | random_forest val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:04,784 | INFO | src.models.train | Training candidate: xgboost
+2026-09-11 19:41:05,007 | INFO | src.models.train | xgboost val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:05,007 | INFO | src.models.train | Training candidate: svm
+2026-09-11 19:41:05,040 | INFO | src.models.train | svm val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:05,046 | INFO | src.models.train | Best candidate: logistic_regression | test metrics: {'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 0.6666666666666667, 'confusion_matrix': [[2, 1], [1, 0]]}
+2026-09-11 19:41:05,047 | INFO | src.models.registry | Saved model version v20260911_194105 (logistic_regression) to /tmp/pytest-of-root/pytest-5/test_pipeline_end_to_end0/models_registry/v20260911_194105
+2026-09-11 19:41:05,047 | INFO | src.models.registry | Promoted model version v20260911_194105 to production
+2026-09-11 19:41:05,047 | INFO | src.models.train | Model v20260911_194105 promoted to production.
+2026-09-11 19:41:05,057 | INFO | src.data.ingestion | Ingested sample_appointments.csv: 25 raw rows, 25 valid, 0 errors
+2026-09-11 19:41:05,058 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-11 19:41:05,061 | INFO | src.data.preprocessing | Preprocessing complete: 25 rows remain
+2026-09-11 19:41:05,067 | INFO | src.features.feature_engineering | Engineered features: 25 rows, 24 columns
+2026-09-11 19:41:05,076 | INFO | src.models.train | Applied SMOTE (k_neighbors=4): 17 -> 24 training rows
+2026-09-11 19:41:05,076 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-11 19:41:05,125 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:05,125 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-11 19:41:05,210 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:41:05,210 | INFO | src.models.train | Training candidate: random_forest
+2026-09-11 19:41:06,305 | INFO | src.models.train | random_forest val metrics: {'accuracy': 0.75, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [1, 0]]}
+2026-09-11 19:41:06,305 | INFO | src.models.train | Training candidate: xgboost
+2026-09-11 19:41:06,495 | INFO | src.models.train | xgboost val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:06,495 | INFO | src.models.train | Training candidate: svm
+2026-09-11 19:41:06,538 | INFO | src.models.train | svm val metrics: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1_score': 1.0, 'roc_auc': 1.0, 'confusion_matrix': [[3, 0], [0, 1]]}
+2026-09-11 19:41:06,545 | INFO | src.models.train | Best candidate: logistic_regression | test metrics: {'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'f1_score': 0.0, 'roc_auc': 0.6666666666666667, 'confusion_matrix': [[2, 1], [1, 0]]}
+2026-09-11 19:41:06,546 | INFO | src.models.registry | Saved model version v20260911_194106 (logistic_regression) to /tmp/pytest-of-root/pytest-5/models_registry0/v20260911_194106
+2026-09-11 19:41:06,546 | INFO | src.models.registry | Promoted model version v20260911_194106 to production
+2026-09-11 19:41:06,546 | INFO | src.models.train | Model v20260911_194106 promoted to production.
+2026-09-11 19:41:06,725 | INFO | httpx | HTTP Request: POST http://testserver/api/v1/predict "HTTP/1.1 422 Unprocessable Entity"
+2026-09-11 19:41:06,737 | INFO | src.features.feature_engineering | Engineered features: 1 rows, 13 columns
+2026-09-11 19:41:06,741 | INFO | httpx | HTTP Request: POST http://testserver/api/v1/predict "HTTP/1.1 200 OK"
+2026-09-11 19:41:06,753 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 18 columns
+2026-09-11 19:41:06,759 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 14 columns
+2026-09-11 19:41:06,765 | INFO | src.features.feature_engineering | Engineered features: 3 rows, 14 columns
+2026-09-11 19:41:06,767 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:41:06,771 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-11 19:41:06,772 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:41:06,775 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-11 19:41:06,777 | INFO | src.data.preprocessing | Deduplication removed 1 rows
+2026-09-11 19:41:06,780 | INFO | src.data.preprocessing | Preprocessing complete: 3 rows remain
+2026-09-12 01:24:55,371 | INFO | src.data.ingestion | Ingested KaggleV2-May-2016.csv: 110527 raw rows, 110522 valid, 5 errors
+2026-09-12 01:24:56,689 | INFO | src.data.ingestion | Saved 110522 records to C:\Users\Ayaan\Downloads\medical-noshow-prediction-FINAL-FIXED2 (1)\proj\data\processed\ingested.csv
+2026-09-12 01:24:56,692 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-12 01:24:56,762 | INFO | src.data.preprocessing | Preprocessing complete: 110522 rows remain
+2026-09-12 01:25:21,765 | INFO | src.features.feature_engineering | Engineered features: 110522 rows, 22 columns
+2026-09-12 01:25:29,495 | INFO | src.models.train | Dataset has 77364 training rows; skipping SMOTE to avoid excessive memory/time use. Class-weighted models will handle imbalance.
+2026-09-12 01:25:29,495 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-12 01:25:35,889 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 0.6538391941612883, 'precision': 0.3132417239225484, 'recall': 0.5993426949507021, 'f1_score': 0.4114449800020511, 'roc_auc': 0.6803695913863198, 'confusion_matrix': [[8834, 4398], [1341, 2006]]}
+2026-09-12 01:25:35,890 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-12 01:25:38,684 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.5727727848483021, 'precision': 0.29965679965679964, 'recall': 0.834777412608306, 'f1_score': 0.4410070239128719, 'roc_auc': 0.7250386474704016, 'confusion_matrix': [[6702, 6530], [553, 2794]]}
+2026-09-12 01:25:38,684 | INFO | src.models.train | Training candidate: random_forest
+2026-09-12 01:26:09,407 | INFO | src.models.train | random_forest val metrics: {'accuracy': 0.5785632426563725, 'precision': 0.3026886383347788, 'recall': 0.8341798625634896, 'f1_score': 0.44419696126004293, 'roc_auc': 0.7357125386881139, 'confusion_matrix': [[6800, 6432], [555, 2792]]}
+2026-09-12 01:26:09,408 | INFO | src.models.train | Training candidate: xgboost
+2026-09-12 01:26:17,683 | INFO | src.models.train | xgboost val metrics: {'accuracy': 0.8027022136437663, 'precision': 0.601063829787234, 'recall': 0.06752315506423663, 'f1_score': 0.12140746709642761, 'roc_auc': 0.737584206596967, 'confusion_matrix': [[13082, 150], [3121, 226]]}
+2026-09-12 01:26:17,684 | INFO | src.models.train | Training candidate: svm
+2026-09-12 15:26:51,110 | INFO | src.data.ingestion | Ingested KaggleV2-May-2016.csv: 110527 raw rows, 110522 valid, 5 errors
+2026-09-12 15:26:53,661 | INFO | src.data.ingestion | Saved 110522 records to C:\Users\Ayaan\Downloads\medical-noshow-prediction-FINAL-FIXED2 (1) ans\proj\data\processed\ingested.csv
+2026-09-12 15:26:53,666 | INFO | src.data.preprocessing | Deduplication removed 0 rows
+2026-09-12 15:26:53,787 | INFO | src.data.preprocessing | Preprocessing complete: 110522 rows remain
+2026-09-12 15:27:47,111 | INFO | src.features.feature_engineering | Engineered features: 110522 rows, 22 columns
+2026-09-12 15:27:49,895 | INFO | src.models.train | Dataset has 77364 training rows; skipping SMOTE to avoid excessive memory/time use. Class-weighted models will handle imbalance.
+2026-09-12 15:27:49,895 | INFO | src.models.train | Training candidate: logistic_regression
+2026-09-12 15:28:00,638 | INFO | src.models.train | logistic_regression val metrics: {'accuracy': 0.6538391941612883, 'precision': 0.3132417239225484, 'recall': 0.5993426949507021, 'f1_score': 0.4114449800020511, 'roc_auc': 0.6803695913863198, 'confusion_matrix': [[8834, 4398], [1341, 2006]]}
+2026-09-12 15:28:00,640 | INFO | src.models.train | Training candidate: decision_tree
+2026-09-12 15:28:07,688 | INFO | src.models.train | decision_tree val metrics: {'accuracy': 0.5727727848483021, 'precision': 0.29965679965679964, 'recall': 0.834777412608306, 'f1_score': 0.4410070239128719, 'roc_auc': 0.7250386474704016, 'confusion_matrix': [[6702, 6530], [553, 2794]]}
+2026-09-12 15:28:07,689 | INFO | src.models.train | Training candidate: random_forest
+2026-09-12 15:28:53,066 | INFO | src.models.train | random_forest val metrics: {'accuracy': 0.5793473671512154, 'precision': 0.3029446919482777, 'recall': 0.8329847624738572, 'f1_score': 0.4443027888446215, 'roc_auc': 0.7355674639058458, 'confusion_matrix': [[6817, 6415], [559, 2788]]}
+2026-09-12 15:28:53,067 | INFO | src.models.train | Training candidate: xgboost
+2026-09-12 15:29:10,288 | INFO | src.models.train | xgboost val metrics: {'accuracy': 0.8027022136437663, 'precision': 0.601063829787234, 'recall': 0.06752315506423663, 'f1_score': 0.12140746709642761, 'roc_auc': 0.737584206596967, 'confusion_matrix': [[13082, 150], [3121, 226]]}
+2026-09-12 15:29:10,289 | INFO | src.models.train | Training candidate: svm
+2026-09-12 15:48:01,291 | INFO | __main__ | Dataset has 77364 training rows; skipping SMOTE to avoid excessive memory/time use. Class-weighted models will handle imbalance.
+2026-09-12 15:48:01,291 | INFO | __main__ | Training candidate: logistic_regression
+2026-09-12 15:48:07,697 | INFO | __main__ | logistic_regression val metrics: {'accuracy': 0.6538391941612883, 'precision': 0.3132417239225484, 'recall': 0.5993426949507021, 'f1_score': 0.4114449800020511, 'roc_auc': 0.6803695913863198, 'confusion_matrix': [[8834, 4398], [1341, 2006]]}
+2026-09-12 15:48:07,697 | INFO | __main__ | Training candidate: decision_tree
+2026-09-12 15:48:10,358 | INFO | __main__ | decision_tree val metrics: {'accuracy': 0.5727727848483021, 'precision': 0.29965679965679964, 'recall': 0.834777412608306, 'f1_score': 0.4410070239128719, 'roc_auc': 0.7250386474704016, 'confusion_matrix': [[6702, 6530], [553, 2794]]}
+2026-09-12 15:48:10,359 | INFO | __main__ | Training candidate: random_forest
+2026-09-12 15:48:42,172 | INFO | __main__ | random_forest val metrics: {'accuracy': 0.579890222570722, 'precision': 0.3031984334203655, 'recall': 0.8326859874514491, 'f1_score': 0.4445330568625887, 'roc_auc': 0.7357549095564292, 'confusion_matrix': [[6827, 6405], [560, 2787]]}
+2026-09-12 15:48:42,173 | INFO | __main__ | Training candidate: xgboost
+2026-09-12 15:48:48,511 | INFO | __main__ | xgboost val metrics: {'accuracy': 0.8027022136437663, 'precision': 0.601063829787234, 'recall': 0.06752315506423663, 'f1_score': 0.12140746709642761, 'roc_auc': 0.737584206596967, 'confusion_matrix': [[13082, 150], [3121, 226]]}
+2026-09-12 15:48:48,512 | INFO | __main__ | Training candidate: svm
+2026-09-12 16:13:15,266 | INFO | __main__ | Dataset has 77364 training rows; skipping SMOTE to avoid excessive memory/time use. Class-weighted models will handle imbalance.
+2026-09-12 16:13:15,267 | INFO | __main__ | Large dataset detected; skipping SVM training.
+2026-09-12 16:13:15,268 | INFO | __main__ | Training candidate: logistic_regression
+2026-09-12 16:13:22,543 | INFO | __main__ | logistic_regression val metrics: {'accuracy': 0.6538391941612883, 'precision': 0.3132417239225484, 'recall': 0.5993426949507021, 'f1_score': 0.4114449800020511, 'roc_auc': 0.6803695913863198, 'confusion_matrix': [[8834, 4398], [1341, 2006]]}
+2026-09-12 16:13:22,544 | INFO | __main__ | Training candidate: decision_tree
+2026-09-12 16:13:25,463 | INFO | __main__ | decision_tree val metrics: {'accuracy': 0.5727727848483021, 'precision': 0.29965679965679964, 'recall': 0.834777412608306, 'f1_score': 0.4410070239128719, 'roc_auc': 0.7250386474704016, 'confusion_matrix': [[6702, 6530], [553, 2794]]}
+2026-09-12 16:13:25,464 | INFO | __main__ | Training candidate: random_forest
+2026-09-12 16:13:57,593 | INFO | __main__ | random_forest val metrics: {'accuracy': 0.5765124555160143, 'precision': 0.30213270142180093, 'recall': 0.8380639378547954, 'f1_score': 0.44414535666218036, 'roc_auc': 0.7360711725817738, 'confusion_matrix': [[6753, 6479], [542, 2805]]}
+2026-09-12 16:13:57,594 | INFO | __main__ | Training candidate: xgboost
+2026-09-12 16:14:03,927 | INFO | __main__ | xgboost val metrics: {'accuracy': 0.8027022136437663, 'precision': 0.601063829787234, 'recall': 0.06752315506423663, 'f1_score': 0.12140746709642761, 'roc_auc': 0.737584206596967, 'confusion_matrix': [[13082, 150], [3121, 226]]}
+2026-09-12 16:14:04,913 | INFO | __main__ | Best candidate: random_forest | test metrics: {'accuracy': 0.5830267205500935, 'precision': 0.3062377743968702, 'recall': 0.841948013146101, 'f1_score': 0.44911945174914336, 'roc_auc': 0.7396257982838681, 'confusion_matrix': [[6848, 6384], [529, 2818]]}
+2026-09-12 16:14:05,117 | INFO | src.models.registry | Saved model version v20260912_104404 (random_forest) to models_registry\v20260912_104404
+2026-09-12 16:14:05,125 | INFO | src.models.registry | Promoted model version v20260912_104404 to production
+2026-09-12 16:14:05,126 | INFO | __main__ | Model v20260912_104404 promoted to production.

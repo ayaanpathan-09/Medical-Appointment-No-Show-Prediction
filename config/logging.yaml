@@ -1,0 +1,21 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  default:
+    format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: default
+    level: INFO
+  file:
+    class: logging.FileHandler
+    formatter: default
+    level: INFO
+    filename: app.log
+
+root:
+  level: INFO
+  handlers: [console, file]

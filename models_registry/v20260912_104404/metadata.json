@@ -1,0 +1,45 @@
+{
+  "model_version": "v20260912_104404",
+  "algorithm": "random_forest",
+  "training_date": "2026-09-12T10:44:05.116029+00:00",
+  "metrics": {
+    "accuracy": 0.5830267205500935,
+    "precision": 0.3062377743968702,
+    "recall": 0.841948013146101,
+    "f1_score": 0.44911945174914336,
+    "roc_auc": 0.7396257982838681,
+    "confusion_matrix": [
+      [
+        6848,
+        6384
+      ],
+      [
+        529,
+        2818
+      ]
+    ]
+  },
+  "feature_columns": [
+    "waiting_days",
+    "prior_noshow_rate",
+    "sms_received",
+    "chronic_condition",
+    "scholarship",
+    "diabetes",
+    "alcoholism",
+    "handicap",
+    "gender_M",
+    "appointment_dow_Monday",
+    "appointment_dow_Saturday",
+    "appointment_dow_Thursday",
+    "appointment_dow_Tuesday",
+    "appointment_dow_Wednesday",
+    "appointment_month_June",
+    "appointment_month_May",
+    "age_group_13-19",
+    "age_group_20-40",
+    "age_group_41-60",
+    "age_group_60+"
+  ],
+  "artifact_path": "models_registry\\v20260912_104404\\model.pkl"
+}

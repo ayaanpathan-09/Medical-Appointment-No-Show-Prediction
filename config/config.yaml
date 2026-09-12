@@ -1,0 +1,22 @@
+environment: development
+
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  models_registry_dir: models_registry
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  version: v1
+
+database:
+  url_env_var: DATABASE_URL   # actual URL is set via .env / environment, not committed here
+
+scoring:
+  default_threshold: 0.5
+  batch_size: 10000
+
+retraining:
+  min_new_months_of_data: 1
+  schedule: "nightly"

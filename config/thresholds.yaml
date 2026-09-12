@@ -1,0 +1,6 @@
+# Risk tier thresholds (FRD Section 7, configurable by administrators).
+# High:   no_show_probability >= 0.7
+# Medium: 0.4 <= no_show_probability < 0.7
+# Low:    no_show_probability < 0.4
+high: 0.7
+medium: 0.4
